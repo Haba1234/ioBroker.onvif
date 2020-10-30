@@ -31,7 +31,7 @@
     "url": "git+https://github.com/Haba1234/ioBroker.onvif.git"
   },
   "dependencies": {
-    "onvif": "^0.6.2",
+    "agsh/onvif": "^0.6.2",
     "nimble": "^0.0.2",
 	"sharp": "^0.25.2",
 	"urllib": "^2.34.2",
