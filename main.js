@@ -306,9 +306,9 @@ function PullPointSubscription(cam, id, callback){
 			let countErr = 0;
 			if (typeof timeoutID[id] !== 'undefined'){
 				timeoutID[id] = setTimeout(function tick(){
-					cam.renew({timeout: 9000, messageLimit: 10}, (err, events) => { //added renew subscription here - not sure if we need the options for it though
+					cam.renew({timeout: 5000, messageLimit: 1024}, (err, events) => { //added renew subscription here - not sure if we need the options for it though
 					});
-					cam.pullMessages({timeout: 9000, messageLimit: 10}, (err, events) => {
+					cam.pullMessages({timeout: 5000, messageLimit: 10}, (err, events) => {
 						if (typeof timeoutID[id] !== 'undefined'){
 							if (err) {
 								countErr++;
@@ -319,7 +319,7 @@ function PullPointSubscription(cam, id, callback){
 									updateState(id, 'connection', false, {"type": "boolean", "read": true, "write": false});
 									callback && callback('stop');
 								} else {
-									timeoutID[id] = setTimeout(tick, 10000);
+									timeoutID[id] = setTimeout(tick, 6000);
 								}
 							} else {
 								countErr = 0;
@@ -334,7 +334,7 @@ function PullPointSubscription(cam, id, callback){
 										camEvents(id, events.notificationMessage);
 									}
 								}
-								timeoutID[id] = setTimeout(tick, 10000);
+								timeoutID[id] = setTimeout(tick, 6000);
 							}
 						}
 					});
