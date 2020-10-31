@@ -35,7 +35,7 @@
     "url": "git+https://github.com/Haba1234/ioBroker.onvif.git"
   },
   "dependencies": {
-    "onvif": "JustMe0815/onvif/releases/tag/0.6.3",
+    "onvif": "JustMe0815/onvif#v0.6.3",
     "nimble": "^0.0.2",
 	"sharp": "^0.25.2",
 	"urllib": "^2.34.2",
