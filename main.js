@@ -306,11 +306,6 @@ function PullPointSubscription(cam, id, callback){
 			let countErr = 0;
 			if (typeof timeoutID[id] !== 'undefined'){
 				timeoutID[id] = setTimeout(function tick(){
-					cam.renew({timeout: 5000, messageLimit: 10}, (err, events) => {
-						if (err) {
-						adapter.log.warn(`startCameras (${id}) pullMessages: ERROR - renew subscription failed. Resubscribing to events`);
-						}
-					});
 					cam.pullMessages({timeout: 500, messageLimit: 1024}, (err, events) => {
 						if (typeof timeoutID[id] !== 'undefined'){
 							if (err) {
@@ -344,7 +339,12 @@ function PullPointSubscription(cam, id, callback){
 				}, 1000);
 			}
 		}
-	});
+	}
+					cam.renew({timeout: 5000, messageLimit: 10}, (err, events) => {
+						if (err) {
+						adapter.log.warn(`startCameras (${id}) pullMessages: ERROR - renew subscription failed. Resubscribing to events`);
+						}
+					}););
 }
 
 async function startCameras(){
