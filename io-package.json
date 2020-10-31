@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "onvif",
-        "version": "0.4.4",
+        "version": "0.4.5",
         "news": {
+			"0.4.5": {
+				"en": "Updated npm onvif and added renew subscription",
+				"de": "NPM Onvif aktualisiert und renew subscription hinzufügen"
+			},
 			"0.4.4": {
 				"en": "Added new state",
 				"de": "Neuer Status hinzugefügt",

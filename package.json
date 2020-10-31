@@ -1,6 +1,6 @@
 {
   "name": "iobroker.onvif",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "ioBroker onvif adapter",
   "author": {
     "name": "Kirov Ilya",
@@ -14,6 +14,10 @@
     {
       "name": "Haba1234",
       "email": "b_roman@inbox.ru"
+    },
+    {
+      "name": "JustMe0815",
+      "email": "dennis.bradenton@gmail.com"
     }
   ],
   "homepage": "https://github.com/Haba1234/ioBroker.onvif",
@@ -31,7 +35,7 @@
     "url": "git+https://github.com/Haba1234/ioBroker.onvif.git"
   },
   "dependencies": {
-    "onvif": "agsh/onvif",
+    "onvif": "^0.6.3",
     "nimble": "^0.0.2",
 	"sharp": "^0.25.2",
 	"urllib": "^2.34.2",

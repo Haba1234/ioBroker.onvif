@@ -306,7 +306,10 @@ function PullPointSubscription(cam, id, callback){
 			let countErr = 0;
 			if (typeof timeoutID[id] !== 'undefined'){
 				timeoutID[id] = setTimeout(function tick(){
-					cam.renew({timeout: 5000, messageLimit: 1024}, (err, events) => { //added renew subscription here - not sure if we need the options for it though
+					cam.renew((err, events) => {
+						if (err) {
+						adapter.log.warn(`startCameras (${id}) pullMessages: ERROR - renew subscription failed. Resubscribing to events`);
+						}
 					});
 					cam.pullMessages({timeout: 5000, messageLimit: 10}, (err, events) => {
 						if (typeof timeoutID[id] !== 'undefined'){
