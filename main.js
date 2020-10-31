@@ -338,14 +338,13 @@ function PullPointSubscription(cam, id, callback){
 					});
 				}, 1000);
 			}
-		}
-	}
-);
 					cam.renew({timeout: 5000, messageLimit: 10}, (err, events) => {
 						if (err) {
 						adapter.log.warn(`startCameras (${id}) pullMessages: ERROR - renew subscription failed. Resubscribing to events`);
 						}
 					});
+		}
+	});
 }
 
 async function startCameras(){
