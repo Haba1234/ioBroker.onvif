@@ -322,7 +322,7 @@ function PullPointSubscription(cam, id, callback){
 									updateState(id, 'connection', false, {"type": "boolean", "read": true, "write": false});
 									callback && callback('stop');
 								} else {
-									timeoutID[id] = setTimeout(tick, 6000);
+									timeoutID[id] = setTimeout(tick, 2000);
 								}
 							} else {
 								countErr = 0;
