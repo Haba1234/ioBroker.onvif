@@ -311,7 +311,7 @@ function PullPointSubscription(cam, id, callback){
 						adapter.log.warn(`startCameras (${id}) pullMessages: ERROR - renew subscription failed. Resubscribing to events`);
 						}
 					});
-					cam.pullMessages({timeout: 2000, messageLimit: 1024}, (err, events) => {
+					cam.pullMessages({timeout: 500, messageLimit: 1024}, (err, events) => {
 						if (typeof timeoutID[id] !== 'undefined'){
 							if (err) {
 								countErr++;
