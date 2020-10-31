@@ -337,7 +337,7 @@ function PullPointSubscription(cam, id, callback){
 										camEvents(id, events.notificationMessage);
 									}
 								}
-								timeoutID[id] = setTimeout(tick, 6000);
+								timeoutID[id] = setTimeout(tick, 2000);
 							}
 						}
 					});
