@@ -304,6 +304,7 @@ function PullPointSubscription(cam, id, callback){
 			adapter.log.debug("createPullPointSubscription: " + JSON.stringify(data));
 			updateState(id, 'connection', true, {"type": "boolean", "read": true, "write": false});
 			let countErr = 0;
+			let countSub = 0;
 			if (typeof timeoutID[id] !== 'undefined'){
 				timeoutID[id] = setTimeout(function tick(){
 					cam.pullMessages({timeout: 500, messageLimit: 1024}, (err, events) => {
@@ -311,6 +312,7 @@ function PullPointSubscription(cam, id, callback){
 							if (err) {
 								countErr++;
 								adapter.log.warn(`startCameras (${id}) pullMessages: ERROR - ${err} (count error = ${countErr}). Resubscribe to events`);
+								countSub = 0;
 								if (countErr > 3){
 									adapter.log.error(`Camera/NVT (${id}) did not answer several times in a row. Disconnected!`);
 									clearTimeout(timeoutID[id]);
@@ -338,11 +340,14 @@ function PullPointSubscription(cam, id, callback){
 					});
 				}, 1000);
 			}
+			if (countSub == 0){
 					cam.renew({timeout: 5000, messageLimit: 10}, (err, events) => {
 						if (err) {
 						adapter.log.warn(`startCameras (${id}) pullMessages: ERROR - renew subscription failed. Resubscribing to events`);
 						}
 					});
+				countSub = 1;
+			}
 		}
 	});
 }
