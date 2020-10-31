@@ -170,6 +170,8 @@ because the adapter works by subscribing to events, the state time of `state.ts`
 
 
 ## Changelog
+### 0.4.5 (2020-10-31)
+* (JustMe0815) Added renew subscription
 
 ### 0.4.4 (2020-05-12)
 * (haba1234) Added new state
