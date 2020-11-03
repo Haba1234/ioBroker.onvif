@@ -306,7 +306,12 @@ function PullPointSubscription(cam, id, callback){
 			let countErr = 0;
 			if (typeof timeoutID[id] !== 'undefined'){
 				timeoutID[id] = setTimeout(function tick(){
-					cam.pullMessages({timeout: 9000, messageLimit: 10}, (err, events) => {
+					cam.renew({timeout: 2000, messageLimit: 10}, (err, events) => {
+						if (err) {
+						adapter.log.warn(`startCameras (${id}) pullMessages: ERROR - renew subscription failed. Resubscribing to events`);
+						}
+					});
+					cam.pullMessages({timeout: 2000, messageLimit: 10}, (err, events) => {
 						if (typeof timeoutID[id] !== 'undefined'){
 							if (err) {
 								countErr++;
@@ -317,7 +322,7 @@ function PullPointSubscription(cam, id, callback){
 									updateState(id, 'connection', false, {"type": "boolean", "read": true, "write": false});
 									callback && callback('stop');
 								} else {
-									timeoutID[id] = setTimeout(tick, 10000);
+									timeoutID[id] = setTimeout(tick, 6000);
 								}
 							} else {
 								countErr = 0;
@@ -332,11 +337,11 @@ function PullPointSubscription(cam, id, callback){
 										camEvents(id, events.notificationMessage);
 									}
 								}
-								timeoutID[id] = setTimeout(tick, 10000);
+								timeoutID[id] = setTimeout(tick, 2000);
 							}
 						}
 					});
-				}, 1000);
+				}, 3000);
 			}
 		}
 	});
