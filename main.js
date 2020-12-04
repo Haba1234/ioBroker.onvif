@@ -311,6 +311,13 @@ function PullPointSubscription(cam, id, callback){
 							if (err) {
 								countErr++;
 								adapter.log.warn(`startCameras (${id}) pullMessages: ERROR - ${err} (count error = ${countErr}). Resubscribe to events`);
+								cam.renew({}, (err, data) => {						
+									adapter.log.warn(JSON.stringify(err));
+									adapter.log.warn(JSON.stringify(data));
+									if (err) {
+										adapter.log.warn(`PullPointSubscription (${id}) cam.renew: ERROR - renew subscription failed.`);
+									}
+								});
 								if (countErr > 3){
 									adapter.log.error(`Camera/NVT (${id}) did not answer several times in a row. Disconnected!`);
 									clearTimeout(timeoutID[id]);
