@@ -1,220 +1,233 @@
 {
-    "common": {
-        "name": "onvif",
-        "version": "0.4.4",
-        "news": {
-			"0.4.4": {
-				"en": "Added new state",
-				"de": "Neuer Status hinzugefügt",
-				"ru": "Добавлено новое состояние",
-				"pt": "Adicionado novo estado",
-				"nl": "Nieuwe staat toegevoegd",
-				"fr": "Nouvel état ajouté",
-				"it": "Aggiunto nuovo stato",
-				"es": "Nuevo estado agregado",
-				"pl": "Dodano nowy stan",
-				"zh-cn": "添加了新状态"
-			},
-			"0.4.3": {
-				"en": "Snapshot preview is squeezed. Support digest authentification.",
-				"de": "Die Schnappschussvorschau wird gedrückt. Unterstützung der Digest-Authentifizierung.",
-				"ru": "Мини снимки в админ панели сжаты. Поддержка digest authentification.",
-				"pt": "A visualização do instantâneo é compactada. Suporte à autenticação de resumo.",
-				"nl": "Snapshotvoorbeeld wordt geperst. Ondersteuning van verificatieverificatie.",
-				"fr": "L'aperçu de l'instantané est compressé. Prise en charge de l'authentification Digest.",
-				"it": "L'anteprima dell'istantanea viene compressa. Supporta l'autenticazione digest.",
-				"es": "La vista previa de la instantánea se exprime. Soporte de autenticación de resumen.",
-				"pl": "Podgląd migawki jest ściśnięty. Obsługuje uwierzytelnianie skrótów.",
-				"zh-cn": "快照预览受到挤压。支持摘要认证。"
-			},
-			"0.4.2": {
-				"en": "Updated admin panel",
-				"de": "Admin-Panel aktualisiert",
-				"ru": "Обновлена админка",
-				"pt": "Painel de administração atualizado",
-				"nl": "Bijgewerkt admin paneel",
-				"fr": "Panneau d'administration mis à jour",
-				"it": "Pannello di amministrazione aggiornato",
-				"es": "Panel de administración actualizado",
-				"pl": "Zaktualizowany panel administracyjny",
-				"zh-cn": "更新的管理面板"
-			},
-			"0.4.1": {
-				"en": "States as an Object. Minor improvements.",
-				"de": "Staaten als Objekt. Kleinere Verbesserungen.",
-				"ru": "Состояния как объект. Незначительные улучшения.",
-				"pt": "Estados como um objeto. Pequenas melhorias.",
-				"nl": "Staten als een object. Kleine verbeteringen.",
-				"fr": "États comme un objet. Améliorations mineures.",
-				"it": "Stati come oggetto. Piccoli miglioramenti.",
-				"es": "Estados como un objeto. Pequeñas mejoras.",
-				"pl": "Stany jako obiekt. Niewielkie zmiany.",
-				"zh-cn": "状态为对象。小改进。"
-			},
-			"0.3.0": {
-				"en": "Added support for the Discovery adapter",
-				"de": "Unterstützung für den Discovery-Adapter hinzugefügt",
-				"ru": "Добавлена поддержка адаптера Discovery",
-				"pt": "Suporte adicionado para o adaptador Discovery",
-				"nl": "Ondersteuning toegevoegd voor de Discovery-adapter",
-				"fr": "Prise en charge supplémentaire de l'adaptateur Discovery",
-				"it": "Aggiunto supporto per l'adattatore Discovery",
-				"es": "Soporte agregado para el adaptador Discovery",
-				"pl": "Dodano obsługę adaptera Discovery",
-				"zh-cn": "添加了对发现适配器的支持"
-			},
-			"0.2.0": {
-				"en": "Added camera settings. Bug fixes.",
-				"de": "Kameraeinstellungen hinzugefügt. Fehlerbehebung.",
-				"ru": "Добавлены настройки камеры. Исправление ошибок.",
-				"pt": "Adicionadas configurações da câmera. Correções de bugs.",
-				"nl": "Camera-instellingen toegevoegd. Bugfixes.",
-				"fr": "Ajout de paramètres de caméra. Corrections de bugs.",
-				"it": "Aggiunte impostazioni della fotocamera. Correzioni di bug.",
-				"es": "Se agregaron configuraciones de la cámara. Corrección de errores.",
-				"pl": "Dodano ustawienia aparatu. Poprawki błędów",
-				"zh-cn": "添加了相机设置。 Bug修复。"
-			},
-			"0.1.2": {
-				"en": "Add state 'subscribeEvents'",
-				"de": "Status 'subscribeEvents' hinzufügen",
-				"ru": "Добавить состояние 'subscribeEvents'",
-				"pt": "Adicionar estado 'subscribeEvents'",
-				"nl": "Staat 'subscribeEvents' toevoegen",
-				"fr": "Ajouter l'état 'subscribeEvents'",
-				"it": "Aggiungi stato 'iscrivitiEventi'",
-				"es": "Añadir estado 'subscribeEvents'",
-				"pl": "Dodaj stan „subscribeEvents”",
-				"zh-cn": "添加状态“ subscribeEvents”"
-			},
-			"0.1.1": {
-				"en": "Port polling bug fixed",
-				"de": "Port Polling Bug behoben",
-				"ru": "Исправлена ошибка опроса портов",
-				"pt": "Corrigido o erro de pesquisa de porta",
-				"nl": "Port polling bug opgelost",
-				"fr": "Correction d'un bug d'interrogation de port",
-				"it": "Bug di polling delle porte corretto",
-				"es": "Error de sondeo de puerto corregido",
-				"pl": "Naprawiono błąd odpytywania portu",
-				"zh-cn": "修正了端口轮询错误"
-			},
-			"0.1.0": {
-				"en": "Bug fix and various little things",
-				"de": "Fehlerbehebung und verschiedene Kleinigkeiten",
-				"ru": "Исправление ошибок и различные мелочи",
-				"pt": "Correção de bugs e várias pequenas coisas",
-				"nl": "Bugfix en verschillende kleine dingen",
-				"fr": "Correction de bugs et diverses petites choses",
-				"it": "Bug fix e varie piccole cose",
-				"es": "Corrección de errores y varias pequeñas cosas.",
-				"pl": "Poprawka błędu i różne drobne rzeczy",
-				"zh-cn": "错误修复和各种小事情"
-			},
-            "0.0.2": {
-                "en": "Event and snapshot support",
-                "de": "Event- und Snapshot-Unterstützung",
-                "ru": "Поддержка событий и снапшотов",
-                "pt": "Obsługa zdarzeń i migawek",
-                "fr": "Prise en charge des événements et des instantanés",
-                "nl": "Ondersteuning voor gebeurtenissen en snapshots",
-                "es": "Soporte para eventos e instantáneas",
-                "pl": "Obsługa zdarzeń i migawek"
-            },
-            "0.0.1": {
-                "en": "initial adapter",
-                "de": "Initiale Version",
-                "ru": "Первоначальный адаптер",
-                "pt": "Versão inicial",
-                "fr": "Version initiale",
-                "nl": "Eerste release",
-                "es": "adaptador inicial",
-                "pl": "początkowy adapter"
-            }
-        },
-		"title": "Onvif Support",
-        "titleLang": {
-            "en": "Onvif adapter",
-			"de": "Onvif-Adapter",
-			"ru": "Onvif адаптер",
-			"pt": "Adaptador onvif",
-			"nl": "Onvif-adapter",
-			"fr": "Adaptateur Onvif",
-			"it": "Adattatore Onvif",
-			"es": "Adaptador Onvif",
-			"pl": "Adapter Onvif",
-			"zh-cn": "Onvif适配器"
-        },
-        "desc": {
-            "en": "Onvif adapter",
-			"de": "Onvif-Adapter",
-			"ru": "Onvif адаптер",
-			"pt": "Adaptador onvif",
-			"nl": "Onvif-adapter",
-			"fr": "Adaptateur Onvif",
-			"it": "Adattatore Onvif",
-			"es": "Adaptador Onvif",
-			"pl": "Adapter Onvif",
-			"zh-cn": "Onvif适配器"
-        },
-        "authors": [
-            "Kirov Ilya <kirovilya@gmail.com>",
-            "Roman <b_roman@inbox.ru>"
-        ],
-		"keywords": [
-			"ioBroker",
-            "onvif",
-            "camera",
-			"Smart Home",
-            "home automation"
-        ],
-        "license": "MIT",
-        "platform": "Javascript/Node.js",
-		"main": "main.js",
-        "icon": "onvif.png",
-        "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/Haba1234/ioBroker.onvif/master/admin/onvif.png",
-        "readme": "https://github.com/Haba1234/ioBroker.onvif/blob/master/README.md",
-        "loglevel": "debug",
-		"mode": "daemon",
-        "type": "infrastructure",
-		"compact": true,
-		"materialize": true,
-		"messagebox": true,
-		"dependencies": [
-            {
-                "js-controller": ">=2.0.0"
-            }
-        ]
+  "common": {
+    "name": "onvif",
+    "version": "0.4.5",
+    "news": {
+	"0.4.5": {
+        "en": "Added support for renewing message subscription",
+        "de": "Unterstützung für die Erneuerung des Nachrichtenabonnements hinzugefügt",
+        "ru": "Добавлена поддержка возобновления подписки на сообщения",
+        "pt": "Adicionado suporte para renovação de assinatura de mensagens",
+        "nl": "Ondersteuning toegevoegd voor het verlengen van het berichtabonnement",
+        "fr": "Ajout de la prise en charge du renouvellement de l'abonnement aux messages",
+        "it": "Aggiunto supporto per il rinnovo dell'abbonamento ai messaggi",
+        "es": "Soporte agregado para renovar la suscripción a mensajes",
+        "pl": "Dodano obsługę odnawiania subskrypcji wiadomości",
+        "zh-cn": "添加了对续订消息订阅的支持"
+      },
+      "0.4.4": {
+        "en": "Added new state",
+        "de": "Neuer Status hinzugefügt",
+        "ru": "Добавлено новое состояние",
+        "pt": "Adicionado novo estado",
+        "nl": "Nieuwe staat toegevoegd",
+        "fr": "Nouvel état ajouté",
+        "it": "Aggiunto nuovo stato",
+        "es": "Nuevo estado agregado",
+        "pl": "Dodano nowy stan",
+        "zh-cn": "添加了新状态"
+      },
+      "0.4.3": {
+        "en": "Snapshot preview is squeezed. Support digest authentification.",
+        "de": "Die Schnappschussvorschau wird gedrückt. Unterstützung der Digest-Authentifizierung.",
+        "ru": "Мини снимки в админ панели сжаты. Поддержка digest authentification.",
+        "pt": "A visualização do instantâneo é compactada. Suporte à autenticação de resumo.",
+        "nl": "Snapshotvoorbeeld wordt geperst. Ondersteuning van verificatieverificatie.",
+        "fr": "L'aperçu de l'instantané est compressé. Prise en charge de l'authentification Digest.",
+        "it": "L'anteprima dell'istantanea viene compressa. Supporta l'autenticazione digest.",
+        "es": "La vista previa de la instantánea se exprime. Soporte de autenticación de resumen.",
+        "pl": "Podgląd migawki jest ściśnięty. Obsługuje uwierzytelnianie skrótów.",
+        "zh-cn": "快照预览受到挤压。支持摘要认证。"
+      },
+      "0.4.2": {
+        "en": "Updated admin panel",
+        "de": "Admin-Panel aktualisiert",
+        "ru": "Обновлена админка",
+        "pt": "Painel de administração atualizado",
+        "nl": "Bijgewerkt admin paneel",
+        "fr": "Panneau d'administration mis à jour",
+        "it": "Pannello di amministrazione aggiornato",
+        "es": "Panel de administración actualizado",
+        "pl": "Zaktualizowany panel administracyjny",
+        "zh-cn": "更新的管理面板"
+      },
+      "0.4.1": {
+        "en": "States as an Object. Minor improvements.",
+        "de": "Staaten als Objekt. Kleinere Verbesserungen.",
+        "ru": "Состояния как объект. Незначительные улучшения.",
+        "pt": "Estados como um objeto. Pequenas melhorias.",
+        "nl": "Staten als een object. Kleine verbeteringen.",
+        "fr": "États comme un objet. Améliorations mineures.",
+        "it": "Stati come oggetto. Piccoli miglioramenti.",
+        "es": "Estados como un objeto. Pequeñas mejoras.",
+        "pl": "Stany jako obiekt. Niewielkie zmiany.",
+        "zh-cn": "状态为对象。小改进。"
+      },
+      "0.3.0": {
+        "en": "Added support for the Discovery adapter",
+        "de": "Unterstützung für den Discovery-Adapter hinzugefügt",
+        "ru": "Добавлена поддержка адаптера Discovery",
+        "pt": "Suporte adicionado para o adaptador Discovery",
+        "nl": "Ondersteuning toegevoegd voor de Discovery-adapter",
+        "fr": "Prise en charge supplémentaire de l'adaptateur Discovery",
+        "it": "Aggiunto supporto per l'adattatore Discovery",
+        "es": "Soporte agregado para el adaptador Discovery",
+        "pl": "Dodano obsługę adaptera Discovery",
+        "zh-cn": "添加了对发现适配器的支持"
+      },
+      "0.2.0": {
+        "en": "Added camera settings. Bug fixes.",
+        "de": "Kameraeinstellungen hinzugefügt. Fehlerbehebung.",
+        "ru": "Добавлены настройки камеры. Исправление ошибок.",
+        "pt": "Adicionadas configurações da câmera. Correções de bugs.",
+        "nl": "Camera-instellingen toegevoegd. Bugfixes.",
+        "fr": "Ajout de paramètres de caméra. Corrections de bugs.",
+        "it": "Aggiunte impostazioni della fotocamera. Correzioni di bug.",
+        "es": "Se agregaron configuraciones de la cámara. Corrección de errores.",
+        "pl": "Dodano ustawienia aparatu. Poprawki błędów",
+        "zh-cn": "添加了相机设置。 Bug修复。"
+      },
+      "0.1.2": {
+        "en": "Add state 'subscribeEvents'",
+        "de": "Status 'subscribeEvents' hinzufügen",
+        "ru": "Добавить состояние 'subscribeEvents'",
+        "pt": "Adicionar estado 'subscribeEvents'",
+        "nl": "Staat 'subscribeEvents' toevoegen",
+        "fr": "Ajouter l'état 'subscribeEvents'",
+        "it": "Aggiungi stato 'iscrivitiEventi'",
+        "es": "Añadir estado 'subscribeEvents'",
+        "pl": "Dodaj stan „subscribeEvents”",
+        "zh-cn": "添加状态“ subscribeEvents”"
+      },
+      "0.1.1": {
+        "en": "Port polling bug fixed",
+        "de": "Port Polling Bug behoben",
+        "ru": "Исправлена ошибка опроса портов",
+        "pt": "Corrigido o erro de pesquisa de porta",
+        "nl": "Port polling bug opgelost",
+        "fr": "Correction d'un bug d'interrogation de port",
+        "it": "Bug di polling delle porte corretto",
+        "es": "Error de sondeo de puerto corregido",
+        "pl": "Naprawiono błąd odpytywania portu",
+        "zh-cn": "修正了端口轮询错误"
+      },
+      "0.1.0": {
+        "en": "Bug fix and various little things",
+        "de": "Fehlerbehebung und verschiedene Kleinigkeiten",
+        "ru": "Исправление ошибок и различные мелочи",
+        "pt": "Correção de bugs e várias pequenas coisas",
+        "nl": "Bugfix en verschillende kleine dingen",
+        "fr": "Correction de bugs et diverses petites choses",
+        "it": "Bug fix e varie piccole cose",
+        "es": "Corrección de errores y varias pequeñas cosas.",
+        "pl": "Poprawka błędu i różne drobne rzeczy",
+        "zh-cn": "错误修复和各种小事情"
+      },
+      "0.0.2": {
+        "en": "Event and snapshot support",
+        "de": "Event- und Snapshot-Unterstützung",
+        "ru": "Поддержка событий и снапшотов",
+        "pt": "Obsługa zdarzeń i migawek",
+        "fr": "Prise en charge des événements et des instantanés",
+        "nl": "Ondersteuning voor gebeurtenissen en snapshots",
+        "es": "Soporte para eventos e instantáneas",
+        "pl": "Obsługa zdarzeń i migawek"
+      },
+      "0.0.1": {
+        "en": "initial adapter",
+        "de": "Initiale Version",
+        "ru": "Первоначальный адаптер",
+        "pt": "Versão inicial",
+        "fr": "Version initiale",
+        "nl": "Eerste release",
+        "es": "adaptador inicial",
+        "pl": "początkowy adapter"
+      }
     },
-	"encryptedNative": [
-        "password"
-    ],
-    "protectedNative": [
-        "password"
-    ],
-    "native": {
-        "start_range": "192.168.1.1",
-		"end_range": "192.168.1.254",
-		"ip_list": null,
-        "ports": "80, 7575, 8000, 8080, 8081, 8899",
-        "user": "admin",
-		"password": "admin",
-		"autostartDiscovery": false
+    "title": "Onvif Support",
+    "titleLang": {
+      "en": "Onvif adapter",
+      "de": "Onvif-Adapter",
+      "ru": "Onvif адаптер",
+      "pt": "Adaptador onvif",
+      "nl": "Onvif-adapter",
+      "fr": "Adaptateur Onvif",
+      "it": "Adattatore Onvif",
+      "es": "Adaptador Onvif",
+      "pl": "Adapter Onvif",
+      "zh-cn": "Onvif适配器"
     },
-    "objects": [],
-    "instanceObjects": [
-        {
-            "_id":  "discoveryRunning",
-            "type": "state",
-            "common": {
-                "name":  "Scannig mode",
-                "type":  "boolean",
-                "read":  true,
-                "write": false,
-                "def":   false
-            },
-            "native": {}
-        }
-    ]
+    "desc": {
+      "en": "Onvif adapter",
+      "de": "Onvif-Adapter",
+      "ru": "Onvif адаптер",
+      "pt": "Adaptador onvif",
+      "nl": "Onvif-adapter",
+      "fr": "Adaptateur Onvif",
+      "it": "Adattatore Onvif",
+      "es": "Adaptador Onvif",
+      "pl": "Adapter Onvif",
+      "zh-cn": "Onvif适配器"
+    },
+    "authors": [
+      "Kirov Ilya <kirovilya@gmail.com>",
+      "Roman <b_roman@inbox.ru>"
+    ],
+    "keywords": [
+      "ioBroker",
+      "onvif",
+      "camera",
+      "Smart Home",
+      "home automation"
+    ],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "main": "main.js",
+    "icon": "onvif.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/Haba1234/ioBroker.onvif/master/admin/onvif.png",
+    "readme": "https://github.com/Haba1234/ioBroker.onvif/blob/master/README.md",
+    "loglevel": "debug",
+    "mode": "daemon",
+    "type": "infrastructure",
+    "compact": true,
+    "materialize": true,
+    "messagebox": true,
+    "dependencies": [
+      {
+        "js-controller": ">=2.0.0"
+      }
+    ],
+    "installedFrom": "https://github.com/Haba1234/ioBroker.onvif/tarball/master"
+  },
+  "encryptedNative": [
+    "password"
+  ],
+  "protectedNative": [
+    "password"
+  ],
+  "native": {
+    "start_range": "192.168.1.1",
+    "end_range": "192.168.1.254",
+    "ip_list": null,
+    "ports": "80, 7575, 8000, 8080, 8081, 8899",
+    "user": "admin",
+    "password": "admin",
+    "autostartDiscovery": false
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "discoveryRunning",
+      "type": "state",
+      "common": {
+        "name": "Scannig mode",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
 }
